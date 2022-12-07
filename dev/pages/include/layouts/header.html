@@ -1,3 +1,53 @@
-<header class="header">
-    <h2>Header</h2>
+<header class="header" data-header="main">
+    <div class="main-container max-width">
+        <div class="header__decore"></div>
+        <a href="#" class="logo">
+            <img src="./assets/images/logo-light.svg" class="logo__image" alt="">
+        </a>
+        <div class="header__wrapper-nav">
+            <nav class="header__nav">
+                <ul class="header__nav-list list-reset">
+                    <li class="header__nav-li">
+                        <a href="#" class="link-reset header__nav-link">
+                            <span class="header__nav-link-text">Объекты</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-li">
+                        <a href="#" class="link-reset header__nav-link">
+                            <span class="header__nav-link-text">Услуги</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-li">
+                        <a href="#" class="link-reset header__nav-link">
+                            <span class="header__nav-link-text">Продукция</span>
+                        </a>
+                    </li>
+                    <li class="header__nav-li">
+                        <span class="header__nav-link">
+                            <span class="header__nav-link-text">Компания</span>
+                            <svg class="header__nav-link-icon">
+                                <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down"/>
+                            </svg>
+                        </span>
+                        <div class="header__nav-wrapper-nested-list">
+                            <ul class="header__nav-nested-list list-reset">
+                                <li class="header__nav-nested-li">
+                                    <a href="#" class="header__nav-nested-link link-reset">О компании</a>
+                                </li>
+                                <li class="header__nav-nested-li">
+                                    <a href="#" class="header__nav-nested-link link-reset">Сертификаты</a>
+                                </li>
+                                <li class="header__nav-nested-li">
+                                    <a href="#" class="header__nav-nested-link link-reset">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" class="btn btn--size--md btn--theme--primary">
+                <span class="btn__text">Связаться с нами</span>
+            </a>
+        </div>
+    </div>
 </header>

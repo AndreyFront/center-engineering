@@ -1,0 +1,10 @@
+.subtitle {
+
+    &--size--l {
+        @include adaptiv-font(24, 20);
+    }
+
+    &--size--s {
+        @include adaptiv-font(20, 16);
+    }
+}

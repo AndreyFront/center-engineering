@@ -1,0 +1,25 @@
+.social-network {
+    display: grid;
+    grid-auto-columns: auto;
+    grid-auto-flow: column;
+    justify-content: start;
+    grid-column-gap: 24px;
+
+    &__link {
+        display: grid;
+
+        &:hover .social-network__icon > use {
+            fill: $color-6;
+        }
+    }
+
+    &__icon {
+        width: 42px;
+        height: 42px;
+
+        use {
+            fill: $color-7;
+            transition: fill $transition-time;
+        }
+    }
+}
