@@ -1,0 +1,32 @@
+.round-link {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 178px;
+    height: 178px;
+    padding: 24px;
+    border: 1px solid;
+    border-color: $color-6;
+    border-radius: 100%;
+    background-color: $color-6;
+    box-shadow: 0px 0px 60px rgba(70, 155, 118, 0.25);
+    transition: box-shadow $transition-time, background-color $transition-time, border-color $transition-time;
+
+    &:hover {
+        box-shadow: none;
+        background-color: transparent
+    }
+
+    &:hover &__text {
+        color: $color-6;
+    }
+
+    &__text {
+        @include adaptiv-font(18, 12);
+        color: $color-2;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+        transition: color $transition-time;
+    }
+}

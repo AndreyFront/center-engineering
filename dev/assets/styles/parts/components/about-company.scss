@@ -1,0 +1,60 @@
+.about-company {
+    padding: 20px 0;
+
+    &__wrapper-head {
+        display: grid;
+        grid-template-columns: auto minmax(100px, 785px);
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__wrapper-info {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        justify-content: start;
+        align-items: end;
+        margin-top: -50px;
+    }
+
+    &__block-info {
+        display: grid;
+        align-content: start;
+        padding: 46px 96px 46px 16px;
+        border-left: 1px solid $color-8;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+            height: 530px;
+        }
+
+        &:nth-child(2) {
+            align-content: center;
+        }
+
+        &:nth-child(3) {
+            height: 380px;
+            align-content: end;
+        }
+    }
+
+    &__inner-info {
+        display: grid;
+        grid-row-gap: 8px;
+    }
+
+    &__quantity {
+        font-weight: 600;
+        @include adaptiv-font(56, 48);
+        color: $color-6;
+    }
+
+    &__sign {
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        opacity: 0.5;
+    }
+
+    .title {
+        text-align: left;
+    }
+}

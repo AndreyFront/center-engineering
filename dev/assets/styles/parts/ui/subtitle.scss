@@ -1,10 +1,13 @@
 .subtitle {
+    
 
     &--size--l {
         @include adaptiv-font(24, 20);
+        line-height: 1.5em;
     }
 
     &--size--s {
         @include adaptiv-font(20, 16);
+        line-height: 1.6em;
     }
 }

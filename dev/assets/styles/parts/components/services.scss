@@ -1,0 +1,20 @@
+.services {
+    padding: 116px 0 85px 0;
+    background-color: $color-5;
+    background-image: url(../images/decorative-mesh-inverted.png);
+    background-repeat: no-repeat;
+    background-position: end;
+    background-size: cover;
+
+    &__wrapper-head {
+        display: grid;
+        grid-template-columns: auto minmax(100px, 785px);
+        align-items: start;
+        justify-content: space-between;
+    }
+
+    .title,
+    .title-section__title {
+        color: $color-2;
+    }
+}

@@ -1,0 +1,22 @@
+.our-projects {
+    padding: 120px 0 84px 0;
+
+    &__wrapper-head {
+        display: grid;
+        grid-template-columns: auto minmax(100px, 785px);
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    &__wrapper-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 48px;
+        margin-top: 40px;
+    }
+
+    .title {
+        text-align: left;
+    }
+}

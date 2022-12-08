@@ -1,0 +1,124 @@
+.our-advantages {
+    padding: 78px 0 116px 0;
+    background-color: $color-5;
+    background-image: url(../images/decorative-mesh.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    &__block-head {
+        display: grid;
+        grid-template-columns: auto minmax(100px, 785px);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper-content {
+        position: relative;
+        margin-top: 78px;
+    }
+
+    &__wrapper-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .advantage-card {
+            position: relative;
+            padding: 40px;
+            
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                height: 24px;
+                width: 1px;
+                background-color: rgba(255, 255, 255, 0.2);
+                opacity: 0;
+            }
+    
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+    
+            &:nth-child(1),
+            &:nth-child(4) {
+                &::before {
+                    bottom: 0;
+                    left: 0;
+                    opacity: 1;
+                }
+            }
+
+            &:nth-child(1) {
+                &::after {
+                    bottom: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+
+            &:nth-child(2) {
+                &::before {
+                    top: 0;
+                    left: 0;
+                    opacity: 1;
+                }
+
+                &::after {
+                    bottom: 0;
+                    right: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__decore {
+        position: absolute;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            height: 24px;
+            width: 1px;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &::before {
+            left: 0;
+        }
+
+        &::after {
+            right: 0;
+        }
+
+        &--top {
+            top: 0;
+
+            &::before,
+            &::after {
+                top: 100%;
+            }
+        }
+
+        &--bottom {
+            bottom: 0;
+
+            &::before,
+            &::after {
+                bottom: 100%;
+            }
+        }
+    }
+
+    .title,
+    .title-section {
+        color: $color-2;
+    }
+}

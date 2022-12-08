@@ -2,20 +2,45 @@
     font-weight: 500;
     line-height: 1.1em;
 
-    &--h1 {
+    &--decore {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 9px;
+            right: calc(100% + 24px);
+            width: 30px;
+            height: 30px;
+            background-image: url('../images/quotation-marks.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+    }
+
+    b {
+        color: $color-6;
+    }
+
+    &--h1,
+    &--h1 b {
         @include adaptiv-font(80, 32);
         font-weight: 700;
     }
 
-    &--h2 {
+    &--h2,
+    &--h2 b {
         @include adaptiv-font(48, 24);
     }
 
-    &--h3 {
+    &--h3,
+    &--h3 b {
         @include adaptiv-font(32, 20);
     }
 
-    &--h4 {
+    &--h4,
+    &--h4 b {
         @include adaptiv-font(16, 20);
     }
 }

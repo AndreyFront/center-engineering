@@ -1,0 +1,80 @@
+.project-card {
+
+    &:hover &__block-description {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:hover &__block-image::after {
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    &__wrapper-image {
+        position: relative;
+        height: 514px;
+        overflow: hidden;
+    }
+
+    &__block-image {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0);
+            transition: background-color $transition-time;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__block-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 32px;
+        transform: translateY(15px);
+        opacity: 0;
+        visibility: hidden;
+        transition: transform $transition-time, opacity $transition-time, visibility $transition-time;
+    }
+
+    &__description {
+        color: $color-2;
+        @include adaptiv-font(18, 16);
+        line-height: 1.45em;
+    }
+
+    &__block-info {
+        display: grid;
+        grid-template-columns: auto max-content;
+        grid-column-gap: 20px;
+        align-items: center;
+        justify-content: space-between;
+        padding: 24px 0 48px 0;
+    }
+
+    &__name {
+        font-weight: 500;
+        @include adaptiv-font(32, 20);
+        line-height: 1.5em;
+    }
+
+    &__date {
+        opacity: 0.5;
+        @include adaptiv-font(20, 16);
+        line-height: 1.35em;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+}
