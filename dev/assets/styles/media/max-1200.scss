@@ -1,6 +1,5 @@
 @media screen and (max-width: 1200px) {
     .header {
-        position: relative;
         padding: 24px 0;
 
         &.active-menu {
@@ -11,7 +10,11 @@
                 pointer-events: auto;
                 transform: translateX(0);
             }
-        } 
+        }
+
+        &__decore {
+            display: none;
+        }
 
         &__wrapper-nav {
             position: fixed;
@@ -25,7 +28,7 @@
             align-content: space-between;
             background-color: $color-11;
             background-image: url('../images/decorative-mesh.png');
-            background-size: contain;
+            background-size: cover;
             background-position: top;
             background-repeat: no-repeat;
             opacity: 0;
@@ -120,6 +123,134 @@
         .logo {
             position: relative;
             z-index: 1;
+        }
+    }
+
+    .growth-chart {
+        &__decore {
+            display: none;
+        }
+
+        &__wrapper-head {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+        }
+
+        &__graph img {
+            height: 460px;
+        }
+
+        .title, 
+        & .title-section {
+            padding-top: 0;
+        }
+
+        .title {
+            max-width: 768px;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    .about-company {
+        &__wrapper-head {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+        }
+
+        &__wrapper-info {
+            margin-top: 50px;
+        }
+
+        &__block-info {
+            padding: 46px 46px 46px 16px;
+        }
+
+        .title {
+            max-width: 768px;
+        }
+    }
+
+    .our-principles {
+        &__block-image {
+            width: 340px;
+            height: 340px;
+        }
+
+        .round-link {
+            width: 160px;
+            height: 160px;
+        }
+    }
+
+    .project-card {
+        &__wrapper-image {
+            height: 450px;
+        }
+    }
+
+    .our-projects {
+        &__wrapper-head {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+        }
+    }
+
+    .our-advantages {
+        &__block-head {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+        }
+
+        .title {
+            max-width: 768px;
+        }
+    }
+
+    .services {
+        &__wrapper-head {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+        }
+
+        &__block-service {
+            padding: 24px;
+        }
+
+        .round-link {
+            width: 245px;
+            height: 245px;
+        }
+
+        .title {
+            max-width: 768px;
+        }
+    }
+
+    .products {
+        &__block-head {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+        }
+
+        &__wrapper-content {
+            margin-top: 62px;
+            border: none;
+
+            .main-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        &__block-product {
+            padding: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            max-width: 768px;
         }
     }
 }

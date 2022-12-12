@@ -25,6 +25,7 @@
     &__cities-title {
         color: $color-2;
         opacity: 0.5;
+        @include adaptiv-font(20, 16);
     }
 
     &__list-cities {
@@ -33,7 +34,7 @@
         margin-top: 24px;
     }
 
-    &__li-cities {
+    &__link-cities {
         @include adaptiv-font(20, 16);
     }
 

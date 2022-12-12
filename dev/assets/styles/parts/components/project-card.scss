@@ -18,6 +18,7 @@
 
     &__block-image {
         position: relative;
+        height: 100%;
 
         &::after {
             content: '';
@@ -42,17 +43,20 @@
         position: absolute;
         bottom: 0;
         left: 0;
+        display: grid;
+        grid-row-gap: 10px;
         padding: 32px;
         transform: translateY(15px);
         opacity: 0;
         visibility: hidden;
         transition: transform $transition-time, opacity $transition-time, visibility $transition-time;
-    }
 
-    &__description {
-        color: $color-2;
-        @include adaptiv-font(18, 16);
-        line-height: 1.45em;
+        p {
+            color: $color-2;
+            @include adaptiv-font(18, 16);
+            line-height: 1.45em;
+            margin: 0;
+        }
     }
 
     &__block-info {
@@ -64,10 +68,26 @@
         padding: 24px 0 48px 0;
     }
 
+    &__block-name {
+        display: grid;
+        grid-template-columns: auto max-content;
+        grid-column-gap: 20px;
+    }
+
     &__name {
         font-weight: 500;
         @include adaptiv-font(32, 20);
         line-height: 1.5em;
+    }
+
+    &__icon {
+        display: none;
+        width: 40px;
+        height: 40px;
+
+        use {
+            fill: $color-6;
+        }
     }
 
     &__date {

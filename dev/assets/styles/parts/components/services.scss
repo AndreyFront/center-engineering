@@ -56,7 +56,8 @@
         transform: translate(100%, 50%);
 
         use {
-            fill: $color-6;
+            fill: $color-2;
+            transition: fill $transition-time;
         }
     }
 
@@ -69,5 +70,9 @@
         position: relative;
         width: 346px;
         height: 346px;
+
+        &:hover .services__icon-round-link use {
+            fill: $color-6;
+        }
     }
 }

@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer" data-footer="main">
     <div class="main-container max-width">
         <div class="footer__wrapper-contacts">
             <a href="#" class="logo">
@@ -34,8 +34,10 @@
         </div>
         <div class="footer__wrapper-links">
             <div class="footer__decore"></div>
-            <div class="footer__block-links">
-                <span class="footer__links-title">Навигация</span>
+            <div class="footer__block-links footer__block-links--hide">
+                <div class="footer__block-link-head">
+                    <span class="footer__links-title">Навигация</span>
+                </div>
                 <ul class="footer__links-list list-reset">
                     <li class="footer__links-li">
                         <a href="#" class="footer__links-li-text link-reset">Объекты</a>
@@ -51,9 +53,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__block-links">
-                <span class="footer__links-title">О нас</span>
-                <ul class="footer__links-list list-reset">
+            <div class="footer__block-links" data-footer="block-links">
+                <div class="footer__block-link-head" data-footer="link-head">
+                    <span class="footer__links-title">О нас</span>
+                    <svg class="footer__link-icon">
+                        <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down"/>
+                    </svg>
+                </div>
+                <ul class="footer__links-list list-reset" data-footer="links-list">
                     <li class="footer__links-li">
                         <a href="#" class="footer__links-li-text link-reset">Сертификаты</a>
                     </li>
@@ -62,9 +69,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="footer__block-links">
-                <span class="footer__links-title">Контакты</span>
-                <ul class="footer__links-list list-reset">
+            <div class="footer__block-links" data-footer="block-links">
+                <div class="footer__block-link-head" data-footer="link-head">
+                    <span class="footer__links-title">Контакты</span>
+                    <svg class="footer__link-icon">
+                        <use xlink:href="./assets/icons/sprite-svg.svg#arrow-down"/>
+                    </svg>
+                </div>
+                <ul class="footer__links-list list-reset" data-footer="links-list">
                     <li class="footer__links-li">
                         <a href="tel:79298510404" class="footer__links-li-text link-reset">+7 (929) 851-04-04</a>
                     </li>

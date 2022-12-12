@@ -3,6 +3,7 @@
     grid-template-columns: auto max-content;
     align-items: center;
     justify-content: space-between;
+    grid-column-gap: 10px;
     padding: 22px 40px;
     border: 1px solid $color-5;
     transition: background-color $transition-time;
@@ -16,7 +17,7 @@
     }
 
     &__text {
-        font-size: 18px;
+        @include adaptiv-font(18, 16);
         font-weight: 500;
         letter-spacing: 0.05em;
         text-transform: uppercase;
@@ -25,8 +26,8 @@
     }
 
     &__icon {
-        width: 37px;
-        height: 37px;
+        width: 40px;
+        height: 40px;
 
         use {
             fill: $color-6;

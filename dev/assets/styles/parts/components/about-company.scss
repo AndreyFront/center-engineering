@@ -49,6 +49,7 @@
     }
 
     &__sign {
+        @include adaptiv-font(20, 16);
         text-transform: uppercase;
         letter-spacing: 0.05em;
         opacity: 0.5;

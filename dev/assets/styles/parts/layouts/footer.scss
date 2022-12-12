@@ -117,4 +117,22 @@
         opacity: 0.5;
         color: $main-color;
     }
+
+    &__block-link-head {
+        display: grid;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__link-icon {
+        display: none;
+        width: 20px;
+        height: 20px;
+
+        use {
+            stroke: $color-6;
+        }
+    }
 }
