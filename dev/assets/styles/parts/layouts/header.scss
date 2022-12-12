@@ -151,6 +151,10 @@
         color: $color-9;
     }
 
+    &__burger {
+        display: none;
+    }
+
     .main-container {
         position: relative;
         display: grid;

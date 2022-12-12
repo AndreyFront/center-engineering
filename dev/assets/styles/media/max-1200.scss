@@ -1,1 +1,125 @@
-@media screen and (max-width: 1200px) {}
+@media screen and (max-width: 1200px) {
+    .header {
+        position: relative;
+        padding: 24px 0;
+
+        &.active-menu {
+
+            .header__wrapper-nav {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+                transform: translateX(0);
+            }
+        } 
+
+        &__wrapper-nav {
+            position: fixed;
+            width: 100%;
+            padding: 100px 20px 24px 20px;
+            top: 0;
+            left: 0;
+            height: 100%;
+            grid-template-columns: 1fr;
+            grid-row-gap: 34px;
+            align-content: space-between;
+            background-color: $color-11;
+            background-image: url('../images/decorative-mesh.png');
+            background-size: contain;
+            background-position: top;
+            background-repeat: no-repeat;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateX(-100%);
+            transition: opacity $transition-time, visibility $transition-time, transform $transition-time;
+
+            .btn {
+                margin-top: auto;
+            }
+        }
+
+        &__nav-list {
+            grid-auto-flow: row;
+            grid-row-gap: 24px;
+        }
+
+        &__nav-link-icon {
+            display: none;
+        }
+
+        &__nav-wrapper-nested-list {
+            visibility: visible;
+            opacity: 1;
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0, 0);
+            padding-top: 24px;
+        }
+
+        &__nav-nested-list {
+            grid-row-gap: 24px;
+            padding: 0;
+            width: 100%;
+            background-color: transparent;
+        }
+
+        &__nav-nested-link {
+            font-size: 18px;
+            color: $color-2;
+        }
+
+        &__burger {
+            position: relative;
+            z-index: 1;
+            width: 24px;
+            height: 17px;
+            display: block;
+
+            &.active span {
+                &:nth-child(1) {
+                    top: 5px;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    width: 0%;
+                    opacity: 0;
+                }
+
+                &:nth-child(3) {
+                    top: 5px;
+                    transform: rotate(-45deg);
+                }
+            }
+
+            span {
+                position: absolute;
+                left: 0;
+                display: block;
+                height: 2px;
+                width: 100%;
+                background-color: $color-2;
+                transition: $transition-time ease-in-out;
+
+                &:nth-child(1) {
+                    top: 0;
+                }
+
+                &:nth-child(2) {
+                    top: 8px;
+                }
+
+                &:nth-child(3) {
+                    top: 100%;
+                }
+            }
+        }
+
+        .logo {
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

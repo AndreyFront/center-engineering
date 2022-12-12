@@ -1,1 +1,7 @@
-@media screen and (max-width: 420px) {}
+@media screen and (max-width: 420px) {
+    .header {
+        &__wrapper-nav .btn {
+            width: 100%;
+        }
+    }
+}

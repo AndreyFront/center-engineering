@@ -15,6 +15,22 @@ window.onload = () => {
         })
     }
 
+    function menu() {
+        const header = document.querySelector('[data-header="main"]')
+
+        if (!header) return
+
+        if (window.matchMedia("(max-width: 1200px)").matches) {
+            const btnMenu = header.querySelector('[data-header="btn-menu"]')
+            const menu = header.querySelector('[data-header="menu"]')
+
+            btnMenu.addEventListener('click', () => {
+                btnMenu.classList.toggle('active')
+                header.classList.toggle('active-menu')
+            })
+        }
+    }
+
     function map() {
         ymaps.ready(init)
     
@@ -70,5 +86,6 @@ window.onload = () => {
     }
 
     fixedHeader()
+    menu()
     map()
 }

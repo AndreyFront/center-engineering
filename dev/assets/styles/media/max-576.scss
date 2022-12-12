@@ -1,1 +1,8 @@
-@media screen and (max-width: 576px) {}
+@media screen and (max-width: 576px) {
+    .logo {
+        &__image {
+            width: 130px;
+            height: 30px;
+        }
+    }
+}
