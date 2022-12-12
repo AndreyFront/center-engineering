@@ -1,0 +1,17 @@
+.map {
+    .ymaps-2-1-79-balloon__content {
+        padding: 0;
+    }
+
+    .ymaps-2-1-79-balloon__tail {
+        display: none;
+    }
+
+    .ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+        margin-right: 0;
+    }
+
+    .ymaps-2-1-79-balloon__close {
+        margin-right: 12px;
+    }
+}

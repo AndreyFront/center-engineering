@@ -1,0 +1,47 @@
+.geography-projects {
+    position: relative;
+    overflow: hidden;
+    padding: 84px 0;
+    background-color: $color-5;
+
+    &__map {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__wrapper-info {
+        max-width: 258px;
+    }
+
+    &__wrapper-cities {
+        margin-top: 56px;
+    }
+
+    &__cities-title {
+        color: $color-2;
+        opacity: 0.5;
+    }
+
+    &__list-cities {
+        display: grid;
+        grid-row-gap: 16px;
+        margin-top: 24px;
+    }
+
+    &__li-cities {
+        @include adaptiv-font(20, 16);
+    }
+
+    .title {
+        color: $color-2;
+    }
+
+    .btn {
+        margin-top: 48px;
+    }
+}

@@ -3,7 +3,7 @@
     background-color: $color-5;
     background-image: url(../images/decorative-mesh-inverted.png);
     background-repeat: no-repeat;
-    background-position: end;
+    background-position: 0% 72%;
     background-size: cover;
 
     &__wrapper-head {
@@ -13,8 +13,61 @@
         justify-content: space-between;
     }
 
+    &__wrapper-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 70px;
+        border: 0.5px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &__block-service {
+        display: grid;
+        grid-row-gap: 32px;
+        align-content: start;
+        padding: 40px;
+        border: 0.5px solid rgba(255, 255, 255, 0.2);
+
+        &:hover .services__title-service {
+            color: $color-6;
+        }
+    }
+
+    &__icon-service {
+        width: 56px;
+        height: 56px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__title-service {
+        @include adaptiv-font(32, 24);
+        font-weight: 500;
+        color: $color-2;
+        line-height: 1.4em;
+        transition: color $transition-time;
+    }
+
+    &__icon-round-link {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 60px;
+        height: 60px;
+        transform: translate(100%, 50%);
+
+        use {
+            fill: $color-6;
+        }
+    }
+
     .title,
     .title-section__title {
         color: $color-2;
+    }
+
+    .round-link {
+        position: relative;
+        width: 346px;
+        height: 346px;
     }
 }
