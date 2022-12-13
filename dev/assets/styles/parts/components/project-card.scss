@@ -1,4 +1,24 @@
 .project-card {
+    position: relative;
+    border-bottom: 1px solid $color-8;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        height: 24px;
+        width: 1px;
+        background-color: $color-8;
+    }
+
+    &::before {
+        left: 0;
+    }
+
+    &::after {
+        right: 0;
+    }
 
     &:hover &__block-description {
         transform: translateY(0);

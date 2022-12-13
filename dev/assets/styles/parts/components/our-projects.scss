@@ -16,6 +16,18 @@
         margin-top: 40px;
     }
 
+    .project-card {
+        &:last-child,
+        &:nth-last-child(-n+2) {
+            border-bottom: none;
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+    }
+
     .title {
         text-align: left;
     }
