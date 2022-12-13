@@ -1,0 +1,38 @@
+.projects {
+    padding: 96px 0 60px 0;
+
+    &__decore {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 544px;
+        background-image: url('../images/decorative-mesh.png');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: $color-11;
+    }
+
+    &__wrapper-cards {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-column-gap: 20px;
+        grid-row-gap: 56px;
+        margin-top: 72px;
+    }
+
+    &__list-items {}
+
+    &__li-item {}
+
+    &__link-item {}
+
+    .title {
+        color: $color-2;
+    }
+
+    .main-container {
+        position: relative;
+    }
+}

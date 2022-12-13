@@ -2,23 +2,25 @@
 <html lang="ru">
     <head>
         @include('./include/layouts/head.html', {
-            "title": "Main page"
+            "title": "Главная"
         })
     </head>
     <body>
         <div class="wrapper-page">
             @include('./include/layouts/header.html')
-            <main class="page main-page">
+            <main class="page">
+                <div class="main-page">
 
-                @include('./include/components/performance.html')
-                @include('./include/components/growth-chart.html')
-                @include('./include/components/about-company.html')
-                @include('./include/components/our-principles.html')
-                @include('./include/components/our-projects.html')
-                @include('./include/components/our-advantages.html')
-                @include('./include/components/services.html')
-                @include('./include/components/products.html')
-                
+                    @include('./include/components/performance.html')
+                    @include('./include/components/growth-chart.html')
+                    @include('./include/components/about-company.html')
+                    @include('./include/components/our-principles.html')
+                    @include('./include/components/our-projects.html')
+                    @include('./include/components/our-advantages.html')
+                    @include('./include/components/services.html')
+                    @include('./include/components/products.html')
+
+                </div>
             </main>
             @include('./include/layouts/footer.html')
             <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;loadByRequire=1"></script>

@@ -1,0 +1,39 @@
+.s-services {
+    padding: 96px 0 68px 0;
+    background-image: url('../images/decorative-mesh-inverted.png');
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__block-head {
+        display: grid;
+        grid-template-columns: auto minmax(100px, 785px);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__page-description {
+        @include adaptiv-font(24, 20);
+        line-height: 1.5em;
+    }
+
+    .title,
+    &__page-description {
+        color: $color-2;
+    }
+
+    &__wrapper-cards {
+        margin-top: 100px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    .service-card {
+        &:nth-child(1),
+        &:nth-child(7n+7) {
+            grid-column: span 2;
+        }
+    }
+}

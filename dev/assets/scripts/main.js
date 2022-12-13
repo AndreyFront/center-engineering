@@ -53,6 +53,22 @@ window.onload = () => {
         })
     }
 
+    function page() {
+        const main = document.querySelector('[data-page="main"]')
+        const header = document.querySelector('[data-header="main"]')
+    
+        if (!main) return
+        if (!header) return
+        
+        const wrapperContent = main.querySelector('[data-page="wrapper-content"]')
+
+        if (wrapperContent) {
+            wrapperContent.style.paddingTop = `${header.offsetHeight}px`
+        } else {
+            main.style.paddingTop = `${header.offsetHeight}px`
+        }
+    }
+
     function fixedHeader() {
         const header = document.querySelector('[data-header="main"]')
 
@@ -103,7 +119,11 @@ window.onload = () => {
     }
 
     function map() {
-        ymaps.ready(init)
+        try {
+            ymaps.ready(init)
+        } catch (e) {
+            console.log(e)
+        }
     
         function init() {
             const map = document.querySelector('#map')
@@ -173,6 +193,7 @@ window.onload = () => {
         }
     }
 
+    page()
     fixedHeader()
     menu()
     map()
