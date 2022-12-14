@@ -183,6 +183,13 @@
     }
 
     .project-card {
+        border-bottom: none;
+
+        &::before,
+        &::after {
+            display: none;
+        }
+
         &__block-description {
             display: none;
         }
@@ -293,6 +300,49 @@
             width: 114px;
             height: 114px;
             padding: 5px;
+        }
+    }
+
+    .s-services {
+        padding: 98px 0 50px 0;
+
+        &__wrapper-cards {
+            margin-top: 32px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .service-card {
+            &:nth-child(1),
+            &:nth-child(7n+7) {
+                grid-column: span 1;
+            }
+        }
+    }
+
+    .projects {
+        padding: 152px 0 58px 0;
+
+        &__wrapper-cards {
+            grid-template-columns: repeat(2, 1fr);
+            grid-row-gap: 24px;
+            margin-top: 32px;
+        }
+
+        &__block-head {
+            grid-row-gap: 24px;
+        }
+
+        &__list-items {
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 5px;
+        }
+
+        .project-card {
+            &:nth-child(2),
+            &:nth-child(6n+6) {
+                grid-column: span 1;
+            }
         }
     }
 }

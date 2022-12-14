@@ -83,4 +83,17 @@
             min-height: 276px;
         }
     }
+
+    .service-card {
+        padding: 16px 16px 32px 16px;
+
+        &__block-image {
+            width: 150px;
+            height: 150px;
+        }
+
+        &__block-description {
+            margin-top: 30px;
+        }
+    }
 }
