@@ -260,4 +260,10 @@
             grid-row-gap: 24px;
         }  
     }
+
+    .contacts {
+        &__block-image {
+            width: 49%;
+        }
+    }
 }

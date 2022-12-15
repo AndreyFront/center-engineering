@@ -1,0 +1,53 @@
+.contacts {
+    &__wrapper-contacts {
+        position: relative;
+        padding: 211px 0 104px 0;
+        background-color: $color-5;
+    }
+
+    &__block-image {
+        position: absolute;
+        bottom: 0;
+        right: 65px;
+        width: 53%;
+        height: 616px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__inner-contacts {
+        max-width: 510px;
+
+        .title {
+            color: $color-4;
+        }
+    }
+
+    &__block-contacts {
+        display: grid;
+        grid-row-gap: 48px;
+        margin-top: 58px;
+    }
+
+    &__block-contact {
+        display: grid;
+        grid-row-gap: 16px;
+        align-content: start;
+    }
+
+    &__title-contact {
+        @include adaptiv-font(24, 16);
+        color: $color-14;
+    }
+
+    &__info-contact {
+        font-weight: 500;
+        @include adaptiv-font(32, 20);
+        color: $color-2;
+    }
+}

@@ -1,0 +1,24 @@
+.input {
+    padding: 0 24px;
+    height: 65px;
+    border: 1px solid;
+    border-color: $color-1;
+    border-radius: 6px;
+    outline: none;
+    background-color: $color-2;
+    @include adaptiv-font(18, 14);
+    transition: border-color $transition-time;
+
+    &::placeholder {
+        color: $color-3;
+        @include adaptiv-font(18, 14);
+    }
+
+    &:focus {
+        border-color: $color-14;
+    }
+
+    &--error {
+        border-color: $color-15;
+    }
+}

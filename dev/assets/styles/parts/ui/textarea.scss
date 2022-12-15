@@ -1,0 +1,25 @@
+.textarea {
+    resize: none;
+    outline: none;
+    padding: 20px 24px;
+    height: 249px;
+    border: 1px solid $color-1;
+    border-radius: 6px;
+    outline: none;
+    background-color: $color-2;
+    @include adaptiv-font(18, 14);
+    transition: border-color $transition-time;
+
+    &::placeholder {
+        color: $color-3;
+        @include adaptiv-font(18, 14);
+    }
+
+    &:focus {
+        border-color: $color-14;
+    }
+
+    &--error {
+        border-color: $color-15;
+    }
+}

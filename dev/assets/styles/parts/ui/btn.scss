@@ -48,6 +48,35 @@
         }
     }
 
+    &--theme--secondary {
+        border-color: $color-4;
+        background-color: $color-4;
+        border-radius: 6px;
+
+        &:hover {
+            background-color: transparent;
+        }
+
+        &:hover {
+            .btn {
+                &__text {
+                    color: $color-4;
+                }
+            }
+        }
+
+        .btn {
+            &__text {
+                color: $color-2;
+            }
+        }
+    }
+
+    &--size--bg {
+        width: max-content;
+        height: 58px;
+    }
+
     &--size--md {
         width: max-content;
         padding: 16px 32px;

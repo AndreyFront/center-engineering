@@ -1,0 +1,44 @@
+.feedback {
+    padding: 50px 0 100px 0;
+
+    &__block-title {}
+
+    &__wrapper-contacts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: space-between;
+        grid-column-gap: 20px;
+        grid-row-gap: 48px;
+        margin-top: 98px;
+    }
+
+    &__block-contact {
+        display: grid;
+        grid-row-gap: 16px;
+        align-content: start;
+    }
+
+    &__title {
+        color: $color-14;
+        @include adaptiv-font(24, 16);
+        color: $color-14;
+    }
+
+    &__info {
+        font-weight: 500;
+        color: $color-3;
+        @include adaptiv-font(32, 20);
+        line-height: 1.36em;
+    }
+
+    .title {
+        color: $color-4;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: 0.81fr 1.19fr;
+        justify-content: space-between;
+        grid-column-gap: 20px;
+    }
+}

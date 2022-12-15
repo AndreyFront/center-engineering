@@ -1,0 +1,18 @@
+.form {
+
+    &__form {
+        display: grid;
+        grid-row-gap: 32px;
+    }
+
+    &__wrapper-fields {
+        display: grid;
+        grid-row-gap: 16px;
+    }
+
+    .input {}
+
+    .btn {
+        width: 100%;
+    }
+}
