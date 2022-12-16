@@ -121,6 +121,13 @@ function validateForm() {
     })
 }
 
+function modal() {
+    return new HystModal({
+        linkAttributeName: "data-hystmodal",
+        waitTransitions: true,
+    })
+}
+
 function phoneMask() {
     const phoneMasks = document.querySelectorAll('[data-phone-mask]')
 
@@ -328,11 +335,48 @@ function ourPrinciples() {
     }
 }
 
+function project() {
+    const projectCards = document.querySelectorAll('[data-project-card="main"]')
+    const modal = document.querySelector('#m-project')
+
+    if (!projectCards) return
+    if (!modal) return
+
+    if (window.matchMedia("(max-width: 992px)").matches) {
+        projectCards.forEach(projectCard => {
+            projectCard.setAttribute('data-hystmodal', '#m-project')
+        })
+
+        document.addEventListener('click', (event) => {
+            const el = event.target
+    
+            if (el.closest('[data-project-card="main"]')) {
+                const projectCard = el.closest('[data-project-card="main"]')
+                const image = projectCard.querySelector('[data-project-card="image"]')
+                const blockDescription = projectCard.querySelector('[data-project-card="block-description"]')
+                const name = projectCard.querySelector('[data-project-card="name"]')
+    
+                const modalTitle = modal.querySelector('.m-project__title')
+                const modalBlockImage = modal.querySelector('.m-project__block-image')
+                const modalImage = modal.querySelector('.m-project__image')
+    
+                modalTitle.innerText = name.textContent
+                modalImage.setAttribute('src', image.getAttribute('src'))
+    
+                const cloned = blockDescription.cloneNode(true)
+                modalBlockImage.after(cloned)
+            }
+        })
+    }
+}
+
 page()
 validateForm()
+modal()
 phoneMask()
 fixedHeader()
 menu()
 map()
 footer()
 ourPrinciples()
+project()

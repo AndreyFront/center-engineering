@@ -1,0 +1,41 @@
+.modal {
+
+    &__close-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    &.hystmodal {
+        .hystmodal {
+
+            &__wrap {
+                padding: 0 20px;
+            }
+
+            &__window {
+                padding: 40px 62px;
+                background: $color-5;
+                width: 100%;
+                max-width: 664px;
+            }
+
+            &__close {
+                top: 24px;
+                right: 24px;
+                width: 32px;
+                height: 32px;
+                padding: 0;
+                background-image: none;
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 0.6;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}

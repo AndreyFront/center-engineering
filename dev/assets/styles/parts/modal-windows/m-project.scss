@@ -1,0 +1,50 @@
+.m-project {
+
+    &__block-title {
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: 16px;
+        color: $color-2;
+        line-height: 1.7em;
+    }
+
+    &__block-image {
+        height: 252px;
+    }
+
+    &__image {
+        width: calc(100% + 32px);
+        margin-left: - 16px;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &.modal.hystmodal .hystmodal__window {
+        padding: 18px 16px;
+    }
+
+    &.modal.hystmodal .hystmodal__close {
+        top: 16px;
+        right: 16px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .project-card__block-description {
+        display: grid;
+        position: relative;
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+        padding: 0;
+        margin-top: 16px;
+
+        p {
+            color: $color-2;
+        }
+    }
+}
