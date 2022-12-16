@@ -3,6 +3,8 @@ function validateForm() {
 
     if (!forms.length) return
 
+    let needValidate = false
+
     document.addEventListener('click', (event) => {
         const el = event.target
 
@@ -86,10 +88,12 @@ function validateForm() {
                 }
             }
 
-            validate()
+            if (needValidate) validate()
 
             if (el.closest('button[type="submit"]')) {
                 event.preventDefault()
+
+                needValidate = true
 
                 let numberСorrectАields = 0
 
@@ -114,6 +118,19 @@ function validateForm() {
                 }
             }
         }
+    })
+}
+
+function phoneMask() {
+    const phoneMasks = document.querySelectorAll('[data-phone-mask]')
+
+    if (!phoneMasks.length) return
+
+    phoneMasks.forEach(phoneMask => {
+        IMask(phoneMask, {
+                mask: '+{7}(000)000-00-00'
+            }
+        )
     })
 }
 
@@ -313,6 +330,7 @@ function ourPrinciples() {
 
 page()
 validateForm()
+phoneMask()
 fixedHeader()
 menu()
 map()
