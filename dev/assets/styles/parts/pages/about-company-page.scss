@@ -1,0 +1,12 @@
+.about-company-page {
+
+    .growth-chart {
+        .title {
+            padding-top: 0;
+
+            &::before {
+                display: none;
+            }
+        }
+    } 
+}

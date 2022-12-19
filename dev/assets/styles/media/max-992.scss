@@ -435,4 +435,34 @@
             height: 48px;
         }
     }
+
+    .documents {
+        padding: 110px 0 56px 0;
+
+        &__wrapper-doc {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__card-doc {
+            padding: 24px 12px;
+            grid-row-gap: 24px;
+            border-color: rgba(217, 217, 217, 0.2) !important;
+
+            &:not(:nth-child(2n+2)) {
+                border-right: 1px solid;
+            }
+
+            &:nth-child(2n+2) {
+                border-right: none !important;
+            }
+    
+            &:not(:nth-last-child(-n+1)) {
+                border-bottom: 1px solid;
+            }
+        }
+
+        .main-container {
+            grid-row-gap: 24px;
+        }
+    }
 }

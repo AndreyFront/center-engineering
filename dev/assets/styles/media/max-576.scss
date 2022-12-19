@@ -71,4 +71,19 @@
             grid-template-columns: 1fr;
         }
     }
+
+    .documents {
+        &__wrapper-doc {
+            grid-template-columns: 1fr;
+            border: 1px solid rgba(217, 217, 217, 0.2);
+        }
+
+        &__card-doc {
+            border-right: none !important;
+        }
+
+        .title {
+            text-align: left;
+        }
+    }
 }

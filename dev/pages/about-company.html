@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @include('./include/layouts/head.html', {
+            "title": "О компании"
+        })
+    </head>
+    <body>
+        <div class="wrapper-page">
+            @include('./include/layouts/header.html')
+            <main class="page">
+                <div class="about-company-page">
+
+                    <!-- @include('./include/components/performance.html') -->
+                    @include('./include/components/our-advantages.html')
+                    <section class="growth-chart">
+                        <div class="main-container max-width">
+                            <div class="growth-chart__wrapper-head">
+                                @include('./include/components/tp-service.html')
+                                <h2 class="title title--h2 title--decore title-reset">Постоянно укрепляем за собой статус надежного партнера, расширяя географию и отрасли поставок c 2012 года</h2>
+                            </div>
+                            <div class="growth-chart__wrapper-graph">
+                                <picture class="growth-chart__graph">
+                                    <source srcset="./assets/images/graph-2.svg" media="(max-width: 767px)">
+                                    <img src="./assets/images/graph.svg" alt="">
+                                </picture>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+            </main>
+            @include('./include/layouts/footer.html')
+            @include('./include/layouts/scripts.html')
+        </div>
+    </body>
+</html>

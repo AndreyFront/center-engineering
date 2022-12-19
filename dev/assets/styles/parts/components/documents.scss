@@ -1,0 +1,48 @@
+.documents {
+    padding: 195px 0 100px 0;
+    background-color: $color-5;
+
+    &__wrapper-doc {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__card-doc {
+        display: grid;
+        grid-row-gap: 40px;
+        align-content: start;
+        padding: 56px;
+
+        &:nth-child(1n+1):not(:nth-child(3n+3)) {
+            border-right: 1px solid $color-2;
+        }
+
+        &:not(:nth-last-child(-n+3)) {
+            border-bottom: 1px solid $color-17;
+        }
+    }
+
+    &__doc-name,
+    &__doc-info {
+        font-size: 16px;
+        letter-spacing: -0.15px;
+    }
+
+    &__doc-name {
+        line-height: 1.5em;
+    }
+
+    &__doc-info {
+        color: $color-16;
+    }
+
+    .title {
+        text-align: center;
+        color: $color-2;
+    }
+
+    .main-container {
+        display: grid;
+        grid-row-gap: 56px;
+    }
+}
