@@ -520,4 +520,38 @@
             grid-row-gap: 6px;
         }
     }
+
+    .page-not-found {
+        height: 460px;
+
+        &__block-bg {
+            height: 260px;
+        }
+
+        .btn {
+            max-width: 335px;
+        }
+
+        .main-container {
+            grid-row-gap: 24px;
+        }
+    }
+
+    .privacy-policy {
+        padding: 56px 0;
+
+        &__title {
+            text-align: left;
+        }
+
+        &__block-text {
+            margin-top: 48px;
+    
+            .title {
+                &:not(:first-child) {
+                    margin-top: 48px;
+                }
+            }
+        }
+    }
 }

@@ -1,0 +1,25 @@
+.privacy-policy {
+    padding: 116px 0 100px 0;
+
+    &__title {
+        color: $color-2;
+        text-align: center;
+    }
+
+    &__block-text {
+        margin-top: 72px;
+        color: $color-2;
+
+        p,
+        p a {
+            @include adaptiv-font(18, 16);
+            line-height: 1.56em;
+        }
+
+        .title {
+            &:not(:first-child) {
+                margin-top: 80px;
+            }
+        }
+    }
+}

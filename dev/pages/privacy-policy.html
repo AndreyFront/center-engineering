@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        @include('./include/layouts/head.html', {
+            "title": "Политика конфиденциальности"
+        })
+    </head>
+    <body>
+        <div class="wrapper-page">
+            @include('./include/layouts/header.html')
+            <main class="page" data-page="main">
+                <div class="privacy-policy-page" data-page="wrapper-content">
+
+                    @include('./include/components/privacy-policy.html')
+
+                </div>
+            </main>
+            @include('./include/layouts/footer.html')
+            @include('./include/layouts/scripts.html')
+        </div>
+    </body>
+</html>

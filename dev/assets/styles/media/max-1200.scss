@@ -285,4 +285,16 @@
             grid-row-gap: 42px;
         }   
     }
+
+    .page-not-found {
+        height: 787px;
+
+        &__block-bg {
+            height: 432px;
+        }
+
+        .main-container {
+            grid-row-gap: 34px;
+        }
+    }
 }
