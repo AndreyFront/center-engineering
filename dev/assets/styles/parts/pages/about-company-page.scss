@@ -1,6 +1,14 @@
 .about-company-page {
 
+    .our-advantages {
+        background-image: none;
+    }
+
     .growth-chart {
+        &__wrapper-head {
+            grid-column-gap: 20px;
+        }
+
         .title {
             padding-top: 0;
 

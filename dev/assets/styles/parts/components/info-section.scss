@@ -1,0 +1,46 @@
+.info-section {
+    background-color: $color-5;
+
+    &__block-info {
+        display: grid;
+        grid-row-gap: 16px;
+        align-content: start;
+    }
+
+    &__title,
+    &__description {
+        color: $color-2;
+    }
+
+    &__title {
+        font-weight: 500;
+        @include adaptiv-font(32, 24);
+        line-height: 1.28em;
+    }
+
+    &__description {
+        font-size: 20px;
+        opacity: 0.5;
+        line-height: 1.61em;
+    }
+
+    &__block-image {
+        max-width: 800px;
+        height: 772px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .main-container {
+        display: grid;
+        grid-template-columns: minmax(100px, 447px) auto;
+        grid-column-gap: 20px;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

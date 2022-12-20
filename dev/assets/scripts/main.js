@@ -370,6 +370,45 @@ function project() {
     }
 }
 
+function runningLine() {
+    Marquee3k.init()
+}
+
+function animateNum() {
+    const animateNums = document.querySelectorAll('[data-animate-num]')
+
+    if (!animateNums.length) return
+
+    const numbersObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const courseNumber = entry.target.getAttribute('data-animate-num')
+            const count = new CountUp(
+                entry.target,
+                0,
+                courseNumber,
+                0,
+                entry.target.dataset.duration || 4,
+                {
+                    separator: ' ',
+                    prefix: entry.target.dataset.prefix || '',
+                    suffix: entry.target.dataset.suffix || ''
+                }
+            )
+            count.start(() => {
+                // entry.target.parentElement.classList.add('numbers__item_done')
+            })
+            observer.unobserve(entry.target)
+        }
+      })
+    })
+    
+    
+    animateNums.forEach(num => {
+        numbersObserver.observe(num)
+    })
+}
+
 page()
 validateForm()
 modal()
@@ -380,3 +419,5 @@ map()
 footer()
 ourPrinciples()
 project()
+runningLine()
+animateNum()

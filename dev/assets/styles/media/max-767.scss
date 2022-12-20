@@ -96,4 +96,13 @@
             margin-top: 30px;
         }
     }
+
+    .tp-service {
+        padding: 16px 24px;
+
+        &__block-arrow {
+            width: 76px;
+            height: 76px;
+        }
+    }
 }

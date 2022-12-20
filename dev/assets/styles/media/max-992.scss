@@ -114,35 +114,12 @@
         padding: 65px 0 32px 0;
     }
 
-    .about-company {
-        padding: 0 0 24px 0;
-
-        &__wrapper-info {
-            grid-template-columns: 1fr;
-            grid-row-gap: 16px;
-        }
-
-        &__wrapper-info {
-            margin-top: 24px;
-        }
-
-        &__block-info {
-            padding: 0;
-            border-left: none;
-
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3) {
-                height: max-content;
-            }
-        }
-    }
-
     .title {
         &--decore {
             padding-left: 50px;
 
-            &::before {
+            &::before,
+            &::after {
                 top: 7px;
                 right: calc(100% + -30px);
                 width: 22px;
@@ -463,6 +440,84 @@
 
         .main-container {
             grid-row-gap: 24px;
+        }
+    }
+
+    .section-title {
+        padding: 160px 0 48px 0;
+    }
+
+    .info-section {
+        padding-bottom: 40px;
+
+        &__block-image {
+            order: 1;
+            max-width: 100%;
+            height: 323px;
+        }
+
+        &__block-info {
+            order: 2;
+        }
+
+        .main-container {
+            grid-template-columns: 1fr;
+            grid-row-gap: 32px;
+        }
+    }
+
+    .trust {
+        padding: 21px 0 56px 0;
+
+        &__wrapper-partners {
+            margin-top: 24px;
+
+            .marquee3k__wrapper {
+                grid-column-gap: 8px;
+            }
+        }
+
+        &__inner-partners {
+            grid-column-gap: 8px;
+        }
+    }
+
+    .about-company-page {
+        .our-advantages {
+            padding: 32px 0;
+        }
+
+        .growth-chart {
+            padding: 24px 0 21px 0;
+        }
+    }
+    
+    .partner-card {
+        width: 254px;
+        height: 222px;
+
+        &__logo {
+            max-width: 206px;
+            max-height: 94px;
+        }
+    }
+
+    .about-company {
+        padding: 0 0 24px 0;
+
+        &__block-info {
+            height: 214px;
+            padding: 20px 24px;
+        }
+
+        &__wrapper-info {
+            grid-template-columns: 1fr;
+            margin-top: 24px;
+            grid-row-gap: 8px;
+        }
+
+        &__inner-info {
+            grid-row-gap: 6px;
         }
     }
 }

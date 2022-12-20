@@ -155,21 +155,8 @@
     }
 
     .about-company {
-        &__wrapper-head {
-            grid-template-columns: 1fr;
-            grid-row-gap: 24px;
-        }
-
-        &__wrapper-info {
-            margin-top: 50px;
-        }
-
         &__block-info {
-            padding: 46px 46px 46px 16px;
-        }
-
-        .title {
-            max-width: 768px;
+            height: 502px;
         }
     }
 
@@ -271,5 +258,31 @@
         &__card-doc {
             padding: 30px;
         }
+    }
+
+    .section-title {
+        padding: 200px 0 100px 0;
+
+        &__description {
+            max-width: 768px;
+        }
+
+        .main-container {
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+        }
+    }
+
+    .trust {
+        &__wrapper-head {
+            grid-template-columns: 1fr;
+            grid-row-gap: 16px;
+        }
+    }
+
+    .about-company-page {
+        .growth-chart__wrapper-head {
+            grid-row-gap: 42px;
+        }   
     }
 }

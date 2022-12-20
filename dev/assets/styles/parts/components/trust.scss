@@ -1,0 +1,31 @@
+.trust {
+    padding: 20px 0 100px 0;
+
+    &__wrapper-head {
+        display: grid;
+        grid-template-columns: auto minmax(100px, 785px);
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper-partners {
+        overflow-x: hidden;
+        margin-top: 60px;
+
+        .marquee3k__wrapper {
+            display: grid !important;
+            grid-auto-columns: max-content;
+            grid-auto-flow: column;
+            grid-column-gap: 20px;
+        }
+    }
+
+    &__inner-partners {
+        display: grid !important;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        grid-column-gap: 20px;
+    }
+
+    .main-container {}
+}
