@@ -121,6 +121,28 @@ function validateForm() {
     })
 }
 
+function smoothScrolling() {
+    const anchors = document.querySelectorAll('[data-smooth-scrolling*="#"]')
+
+    if (!anchors.length) return
+
+    document.addEventListener('click', (event) => {
+        const el = event.target
+
+        if (el.closest('[data-smooth-scrolling*="#"]')) {
+            event.preventDefault()
+            const anchor = el.closest('[data-smooth-scrolling*="#"]')
+            
+            const blockID = anchor.getAttribute('data-smooth-scrolling').substr(1)
+            
+            document.querySelector(`[data-smooth-scrolling="${blockID}"]`).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        }
+    })
+}
+
 function modal() {
     return new HystModal({
         linkAttributeName: "data-hystmodal",
@@ -417,6 +439,7 @@ function animateNum() {
 
 page()
 validateForm()
+smoothScrolling()
 modal()
 phoneMask()
 fixedHeader()

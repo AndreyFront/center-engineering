@@ -190,6 +190,10 @@
             grid-row-gap: 6px;
             padding: 24px 0 0 0;
         }
+
+        &__block-name {
+            grid-column-gap: 20px;
+        }
     }
 
     .our-projects {
