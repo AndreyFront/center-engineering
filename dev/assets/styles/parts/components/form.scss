@@ -10,6 +10,26 @@
         grid-row-gap: 16px;
     }
 
+    &__privacy-policy,
+    &__privacy-policy a {
+        @include adaptiv-font(20, 12);
+        line-height: 1.4em;
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__privacy-policy {
+        a {
+            border-bottom: 1px solid ;
+            border-bottom-color: rgba(0, 0, 0, 0.5); 
+            transition: border-bottom-color $transition-time, color $transition-time;
+
+            &:hover {
+                color: $color-4;
+                border-bottom-color: transparent; 
+            }
+        }
+    }
+
     .input {}
 
     .btn {

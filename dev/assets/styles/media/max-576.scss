@@ -86,4 +86,32 @@
             text-align: left;
         }
     }
+
+    .modal {
+
+        &.hystmodal {
+            .hystmodal {
+                &__window {
+                    padding: 48px 16px 16px 16px;
+                }
+
+                &__close {
+                    top: 16px;
+                    right: 16px;
+                }
+            }
+        }
+
+        .title {
+            text-align: left;
+        }
+
+        .form {
+            margin-top: 16px;
+
+            &__form {
+                grid-row-gap: 16px;
+            }
+        }
+    }
 }

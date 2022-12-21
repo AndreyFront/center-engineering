@@ -5,6 +5,42 @@
         height: 26px;
     }
 
+    .form {
+        margin-top: 24px;
+
+        &__form {
+            grid-row-gap: 24px;
+        }
+
+        &__privacy-policy,
+        &__privacy-policy a {
+            @include adaptiv-font(14, 12);
+        }
+        
+        &__privacy-policy {
+            text-align: center;
+            max-width: 478px;
+            margin: 0 auto;
+        }
+
+        .input,
+        .textarea {
+            &::placeholder {
+                color: rgba(0, 0, 0, 0.5);
+                transition: color $transition-time;
+            }
+
+            &:focus::placeholder {
+                color: rgba(0, 0, 0, 1);
+            }
+        }
+    }
+
+    .title {
+        color: $color-4;
+        text-align: center;
+    }
+
     &.hystmodal {
         .hystmodal {
 
@@ -13,10 +49,10 @@
             }
 
             &__window {
-                padding: 40px 62px;
-                background: $color-5;
+                padding: 48px;
+                background: $color-2;
                 width: 100%;
-                max-width: 664px;
+                max-width: 674px;
             }
 
             &__close {

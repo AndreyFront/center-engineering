@@ -1,0 +1,14 @@
+.m-contact-us {
+
+    &.modal.hystmodal {
+        .hystmodal {
+            &__close {
+                opacity: 0.5;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

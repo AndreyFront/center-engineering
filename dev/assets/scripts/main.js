@@ -216,14 +216,20 @@ function fixedHeader() {
 
     if (!header) return
 
-    window.addEventListener('scroll', (event) => {
-        const scrolled = window.pageYOffset ? window.pageYOffset : document.body.scrollTop;
-
+    const logic = (scrolled) => {
         if (scrolled >= 50) {
             header.classList.add('header--fixed')
         } else {
             header.classList.remove('header--fixed')
         }
+    }
+
+    logic(window.pageYOffset)
+
+    window.addEventListener('scroll', (event) => {
+        const scrolled = window.pageYOffset ? window.pageYOffset : document.body.scrollTop;
+        
+        logic(scrolled)
     })
 }
 
