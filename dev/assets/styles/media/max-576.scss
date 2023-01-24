@@ -89,6 +89,25 @@
 
     .modal {
 
+        &__subtitle {
+            margin: 10px auto 0 auto;
+        }
+
+        &.m-success {
+
+            &.hystmodal {
+                .hystmodal {
+                    &__window {
+                        padding: 48px 16px 48px 16px;
+                    }
+                }
+            }
+
+            .title {
+                text-align: center;
+            }
+        }
+
         &.hystmodal {
             .hystmodal {
                 &__window {

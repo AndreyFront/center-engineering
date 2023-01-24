@@ -5,6 +5,13 @@
         height: 26px;
     }
 
+    &__subtitle {
+        display: block;
+        text-align: center;
+        margin: 20px auto 0 auto;
+        @include adaptiv-font(24, 16);
+    }
+
     .form {
         margin-top: 24px;
 
